@@ -1,0 +1,308 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+body {
+    height: 100vh;
+    width: 3100px;
+    background-color: #ffce01;
+    overflow-y: hidden;
+}
+.yel {
+    background-color: #ffce01;
+    transition: all 0.5s;
+}
+.ora {
+    background-color: #f26f21;
+    transition: all 0.5s;
+}
+.per {
+    background-color: #886daf;
+    transition: all 0.5s;
+}
+.zong {
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 15%;
+}
+.nav{
+    width: 100%;
+    height: 15%;
+    /* background-color: blue; */
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+.nav img {
+    height: 110px;
+    width: 240px;
+    margin-left: 206px;
+    margin-top: 50px;
+}
+.nav ul{
+    height: 15%;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+    text-align: center;
+}
+/* .nav ul li a:hover{
+    border-bottom:solid #000 3px ;
+} */
+.underline {
+    position: relative;
+}
+.underline::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transition: all .9s;
+    border-radius: 15%;
+}
+.underline:hover::after{
+    left: 0%;
+    width: 100%;
+ }
+.nav ul li a{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: emoji;
+}
+.nav ul li:nth-child(7) {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+footer {
+    height: 85%;
+    display: flex;
+}
+.footer-left,.footer-center,.footer-right {
+    height: 70%;
+}
+.footer-left {
+    margin-left: 5%;
+}
+.footer-left h1 {
+    font-size: 60px;
+    line-height: 80px;
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
+    font-weight: 600;
+}
+.footer-left h1:nth-child(1) {
+    margin-top: 50px;
+}
+.footer-left>div:nth-child(5) {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 35px;
+}
+.footer-left-watch {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+.footer-left-watch div:nth-child(1) {
+    font-size: 20px;
+    margin-left: 10px;
+    /* linear-匀速运动 alternate-来回 */
+    animation: myleft 1s linear alternate infinite;
+}
+/* 箭头向作动画 */
+@keyframes myleft {
+    to  {
+        transform: translateX(-20px);
+    }
+}
+.footer-center {
+    margin-top: 52px;
+    margin-left: 7%;
+    margin-right: 7%;
+    height: 83%;
+    width: 1187px;
+    /* background-color: #000; */
+    display: flex;
+    justify-content: space-between;
+}
+.footer-center>div {
+    /* text-align: center; */
+    height: 100%;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 8%;
+}
+.footer-center div img {
+    margin-left: -46px;
+    width: 419px;
+    height: 100%;
+}
+.footer-center-left {
+    position: relative;
+}
+.footer-center-center {
+    position: relative;
+}
+.footer-center-right {
+    position: relative;
+}
+.sleep {
+    width: 400px;
+    color: #f6f5f4;
+    position: absolute;
+    bottom: -40px;
+    left: 35px;
+    transition: all 1s;
+}
+.sleep p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 600;
+}
+.sleep p:nth-child(2) {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.sleep h1 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.sleep div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.sleep div:nth-child(4) div:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 20px;
+    z-index: 1;
+}
+.mask {
+    position: absolute;
+    left: -46px;
+    top: 0px;
+    width: 419px;
+    height: 526px;
+    background-image: linear-gradient( 
+        transparent, 
+        rgba(0,0,0,0.6) );
+    opacity: 0;
+}
+/* 图片放大 */
+.footer-center img{
+    transition: all 1s;
+}
+/* hover效果 */
+/* hover-1图片按放大 */
+.footer-center-left:hover img {
+    transform: scale(1.2);
+}
+.footer-center-center:hover img {
+    transform: scale(1.2);
+}
+.footer-center-right:hover img {
+    transform: scale(1.2);
+}
+/* hover-2渐变背景显示 */
+.mask {
+    transition: all 1s;
+}
+.footer-center-left:hover .mask {
+    opacity: 0.7;
+}
+.footer-center-center:hover .mask {
+    opacity: 0.7;
+}
+.footer-center-right:hover .mask {
+    opacity: 0.7;
+}
+/* hover-3文字向上移动 */
+.footer-center-left:hover .sleep {
+    transform: scale(1.1) translateY(-60px);
+}
+.footer-center-center:hover .sleep {
+    transform: scale(1.1) translateY(-60px);
+}
+.footer-center-right:hover .sleep {
+    transform: scale(1.1) translateY(-60px);
+}
+/* 动画 */
+.sleep div:nth-child(4) div {
+    animation: myleft 1s linear alternate infinite;
+}
+.footer-right {
+    margin-top: 52px;
+    margin-left: 3%;
+}
+.footer-right-top p a{
+    font-size: 45px;
+    font-weight: 700;
+    color: #000;
+}
+.footer-right-top>div {
+    margin-top: 25px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    animation: myright 2s linear alternate infinite;
+}
+.footer-right-top>div div:nth-child(1) {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    animation: myleft 1s linear alternate infinite;
+}
+@keyframes myright {
+    50% {
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(-30px);
+    }
+}
+/* .footer-right .footer-right-top>div:nth-child(2) div {
+    animation: myright 3s linear alternate infinite;
+} */
+/* .footer-right-top div:nth-child(3)div {
+    animation: myright 1.5s linear alternate infinite 0.5s;
+}
+.footer-right-top div:nth-child(4) div {
+    animation: myright 2s linear alternate infinite 1s;
+} */
+.footer-right-bottom {
+    margin-top: 80px;
+}
+.footer-right-bottom p {
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer-right-bottom ul {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+.footer-right-bottom ul li img {
+    height: 80%;
+    width: 70%;
+}

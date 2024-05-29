@@ -1,0 +1,109 @@
+﻿@charset "UTF-8";
+/*初始化  reset*/
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;color: #666;}
+ol,ul{list-style:none}
+a{text-decoration:none}
+fieldset,img{border:0;vertical-align:top;}
+a,input,button,select,textarea{outline:none;}
+a,button{cursor:pointer;}
+
+header{
+    height: 15%;
+}
+.nav{
+    width: 100%;
+    height: 13%;
+    /* background-color: blue; */
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+.nav img {
+    height: 110px;
+    width: 240px;
+    margin-left: 206px;
+    margin-top: 30px;
+}
+.nav ul{
+    height: 15%;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+    text-align: center;
+}
+/* .nav ul li a:hover{
+    border-bottom:solid #000 3px ;
+} */
+.underline {
+    position: relative;
+}
+.underline::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transition: all .9s;
+    border-radius: 15%;
+}
+.underline:hover::after{
+    left: 0%;
+    width: 100%;
+ }
+.nav ul li a{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: emoji;
+}
+.nav ul li:nth-child(7) {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+.wrap{
+    width:1200px;
+    margin:10px auto;
+}
+.slide {
+    height: 503px;
+    position: relative;
+    top: 67px;
+}
+.slide li{
+    position: absolute;
+    left:200px;
+    top:0;
+}
+.slide li img{
+    width: 450px;
+    height: 500px;
+}
+.arrow{
+    opacity: 0;
+}
+.prev,.next{
+    width:76px;
+    height:112px;
+    position: absolute;
+    top:50%;
+    margin-top:-56px;
+    background: url(../imgs/prev.png) no-repeat;
+    z-index: 99;
+}
+.next{
+    right:0;
+    background-image: url(../imgs/next.png);
+}
+
+
+
+
+
+
+
+
